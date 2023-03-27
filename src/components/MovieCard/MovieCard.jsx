@@ -17,8 +17,9 @@ const MovieCard = ({movie}) => {
         size={24}
         color2={"#ffd700"}
       />
-      ,
     </div>
+    
+     
   );
 }
 

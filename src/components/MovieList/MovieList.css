@@ -3,7 +3,9 @@
    flex-wrap: wrap;
   justify-content: space-around;
   margin: 10px;
- 
+  text-align: center;
+  font-family: cursive;
+  
 }
 
 .movie-card img {

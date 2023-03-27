@@ -96,7 +96,6 @@ useEffect(() => {
 
   return <div className="App">
     <MyNav setMovies={setMovies} movies={movies} setStars={setStars} setTitre={setTitre} stars={stars} />
-   
     <MovieList movies={filtred}/>  
     </div>;
   
