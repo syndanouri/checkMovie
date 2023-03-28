@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 import MyNav from './components/MyNav/MyNav';
 import MovieList from './components/MovieList/MovieList';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route} from 'react-router-dom';
+import MovieDetails from './components/MovieDetails/MovieDetails';
 
 function App() {
 const [movies, setMovies] = useState([
@@ -95,8 +97,18 @@ useEffect(() => {
 
 
   return <div className="App">
-    <MyNav setMovies={setMovies} movies={movies} setStars={setStars} setTitre={setTitre} stars={stars} />
-    <MovieList movies={filtred}/>  
+    <MyNav setMovies={setMovies} 
+    movies={movies} 
+    setStars={setStars} 
+    setTitre={setTitre} stars={stars} />
+
+    <Routes>
+    <Route path="/movie/:id" element={<MovieDetails movies={movies}/>} />
+    <Route path="/" element= {<MovieList movies={filtred}/>}/> 
+    
+    
+    </Routes>
+    
     </div>;
   
   }
